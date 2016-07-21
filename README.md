@@ -1,4 +1,4 @@
-# ExpRover
+# Experimentory Rover
 
 
 This starter code is for the Experimentory Summer Program's Theater and Electronics Cluster. Students are creating a line 
