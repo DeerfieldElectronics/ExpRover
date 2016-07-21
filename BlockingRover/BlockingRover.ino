@@ -3,6 +3,11 @@
  * Additional code by:
  */
 
+/*
+ * Control functions:
+ * stop(), forward(), backward(), left(), right(), softLeft(), softRight()
+ */
+
 void setup() {
   // put your setup code here, to run once:
 
@@ -13,6 +18,22 @@ void loop() {
 
 }
 
+
+
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+ 
 //Move function from http://bildr.org/2012/04/tb6612fng-arduino/
 void move(int motor, int speed, int direction){
 //Move specific motor at speed and direction
