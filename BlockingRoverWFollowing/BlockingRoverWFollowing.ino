@@ -14,7 +14,7 @@
  int rightValue = 0;
  int leftValue = 0;
 
- int threshold = 300;
+ int threshold = 700;
 
  //Motor control variables
  int STBY = 10; //standby
@@ -31,6 +31,16 @@
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(STBY, OUTPUT);
+
+  pinMode(PWMA, OUTPUT);
+  pinMode(AIN1, OUTPUT);
+  pinMode(AIN2, OUTPUT);
+
+  pinMode(PWMB, OUTPUT);
+  pinMode(BIN1, OUTPUT);
+  pinMode(BIN2, OUTPUT);
+  
   Serial.begin(9600);  
   Serial.println("Ready to line follow!");
 
@@ -55,7 +65,7 @@ void loop() {
   else{
     forward();
   }
-  delay(500);
+  //delay(100);
 } 
 
 
@@ -109,26 +119,27 @@ void move(int motor, int speed, int direction){
 void stop(){  
   move(1, 0, 0); //motor 1, stop
   move(2, 0, 0); //motor 2, stop
+  delay(100);
 }
 
 void forward(){
   move(1, 56, 1); //motor 1, low speed, forward
   move(2, 50, 1); //motor 2, low speed, forward
-  delay(1000);
+  delay(100);
   //stop();
 }
 
 void backward(){
   move(1, 54, 0); //motor 1, low speed, reverse
   move(2, 50, 0); //motor 2, low speed, reverse
-  delay(1000);
+  delay(100);
   //stop();
 }
 
 void left(){
   move(1, 50, 1); //motor 1, low speed, forward
   move(2, 50, 0); //motor 2, low speed, reverse
-  delay(1000);
+  delay(100);
   //stop();
 }
 
@@ -136,21 +147,7 @@ void right(){
   //go();
   move(1, 50, 0); //motor 1, low speed, reverse
   move(2, 50, 1); //motor 2, low speed, forward
-  delay(1000);
-  //stop();
-}
-
-void softLeft(){
-  move(1, 50, 1); //motor 1, low speed, forward
-  move(2, 50, 0); //motor 2, low speed, reverse
-  delay(500);
-  //stop();
-}
-
-void softRight(){
-  move(1, 50, 0); //motor 1, low speed, reverse
-  move(2, 50, 1); //motor 2, low speed, forward
-  delay(500);
+  delay(100);
   //stop();
 }
 
