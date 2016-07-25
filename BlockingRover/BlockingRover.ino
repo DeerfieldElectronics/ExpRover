@@ -7,6 +7,7 @@
  * Control functions:
  * stop(), forward(), backward(), left(), right(), softLeft(), softRight()
  */
+ 
 
 void setup() {
   // put your setup code here, to run once:
@@ -16,7 +17,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-}
+} 
 
 
 
@@ -75,21 +76,21 @@ void forward(){
   move(1, 56, 1); //motor 1, low speed, forward
   move(2, 50, 1); //motor 2, low speed, forward
   delay(1000);
-  stop();
+  //stop();
 }
 
 void backward(){
   move(1, 54, 0); //motor 1, low speed, reverse
   move(2, 50, 0); //motor 2, low speed, reverse
   delay(1000);
-  stop();
+  //stop();
 }
 
 void left(){
   move(1, 50, 1); //motor 1, low speed, forward
   move(2, 50, 0); //motor 2, low speed, reverse
   delay(1000);
-  stop();
+  //stop();
 }
 
 void right(){
@@ -97,20 +98,20 @@ void right(){
   move(1, 50, 0); //motor 1, low speed, reverse
   move(2, 50, 1); //motor 2, low speed, forward
   delay(1000);
-  stop();
+  //stop();
 }
 
 void softLeft(){
   move(1, 50, 1); //motor 1, low speed, forward
   move(2, 50, 0); //motor 2, low speed, reverse
   delay(500);
-  stop();
+  //stop();
 }
 
 void softRight(){
   move(1, 50, 0); //motor 1, low speed, reverse
   move(2, 50, 1); //motor 2, low speed, forward
   delay(500);
-  stop();
+  //stop();
 }
 
