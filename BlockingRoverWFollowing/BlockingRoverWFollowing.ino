@@ -14,7 +14,7 @@
  int rightValue = 0;
  int leftValue = 0;
 
- int threshold = 700;
+ int threshold = 750;
 
  //Motor control variables
  int STBY = 10; //standby
